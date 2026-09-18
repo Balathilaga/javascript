@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("question no 1");
+        class Student{
+            constructor( sid, sname, smark){
+                this.sid = sid;
+                this.sname = sname;
+                this.smark = smark;
+            }
+            display() {
+                console.log(
+                   `Student ID : ${this.sid} and Student name : ${this.sname} Student Mark : ${this.smark}`);
+            }
+        }
+         let stud = new Student (1, "bala" , "85");
+         stud.display();
+
+        let stud1 = new Student (2, "thilaga", "78");
+        stud1.display();
+
+        let stud2 = new Student (3, "vijay", "98");
+        stud2.display();
+      
+        console.log("Question no 2");
+
+    //     class employee{
+    //         constructor(eid,ename,edesignation,esalary){
+    //             this.eid = eid;
+    //             this.ename = ename;
+    //             this.edesignation = edesignation;
+    //             this.esalary = esalary;
+    //         }
+    //         display1(){
+    //             console.log(`Employee id : ${ this.eid} Employee Name :${this.ename}
+    //              Employee Designation : ${this.edesignation} Employee salary :${this.esalary}`);
+    //         }
+
+    //       readempy(){
+    //         this.eid = prompt("Enter your Id");
+    //         this.ename = prompt("Enter your name");
+    //         this.edesignation = prompt("Enter your designation");
+    //         this.esalary = prompt("Enter your salary");
+    //         }
+    //     }
+    //   let employee1 = new employee();
+    //     employee1.readempy(); 
+    //      employee1.display1();
+       
+         
+    //    console.log("Question no 3...");
+    //     class customer{
+    //         constructor(cid,cname,mobile,adress){
+    //             this.cid = cid;
+    //             this.cname = cname;
+    //             this.mobile = mobile;
+    //             this.adress = adress;
+    //         }
+    //         display(){
+    //             console.log(`customer id : ${this.cid}) customer Name :${this.ename}
+    //             customer mobile : ${this.mobile } customer adress : ${this.adress}`);
+    //         }
+    //         readcus(){
+    //         this.cid = prompt("Enter your Id");
+    //         this.cname = prompt("Enter your name");
+    //         this.mobile = prompt("Enter your number");
+    //         this.adress = prompt("Enter your adress");
+    //         }
+    //     }  
+    //     let customer1 = new customer();
+    //     customer1.readcus();
+    //     customer1.display();
+
+     console.log("Question No 4");
+     class staff{
+        constructor(sid,sname,mobile,email, depatrment,adress){
+            this.sid = sid;
+            this.sname= sname;
+            this.mobile = mobile;
+            this.email = email;
+            this.depatrment = depatrment;
+            this.adress = adress
+        }
+        displaystaffdata(){
+            console.log(`customer id :${this.sid} customername : ${this.sname} mobile :${this.mobile} 
+            email :${this.email} department :${this.depatrment}  adress : ${this.adress}`);
+        }
+     
+     readstaff() {
+           this.sid = prompt("Enter your Id");
+            this.sname = prompt("Enter your name");
+            this.mobile = prompt("Enter your number");
+            this.email = prompt("enter your email");
+            this.depatrment = prompt("enter your department");
+            this.adress = prompt("Enter your adress");
+     }      
+     
+    }
+    let staff1 = new staff();
+    staff1.readstaff();
+    staff1.displaystaffdata();
+    </script>
+</body>
+</html>
