@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* console.log("Question no 1");
+      class Employee{
+        constructor(empId,empName,salary){
+            this.empId = empId;
+            this.empName = empName;
+            this.salary = salary;
+        }
+        display(){
+            console.log(`Employee id : ${this.empId} Employee name : ${ this.empName} salary :${this.salary}`);
+        }
+        read(){
+            this.empId =prompt("enter the employee id");
+            this.empName= prompt("Enter the employee name");
+            this.salary=prompt("Enter the employee salary");
+        }
+      }
+      let emp1= new Employee();
+      emp1.read();
+      emp1.display();*/
+
+
+      console.log("Question no 2");
+      class Vehicle{
+        constructor(name,year){
+            this.name = name;
+            this.year = year       
+         }
+         dispaly1(){
+            console.log(`name :${this.name} year : ${this.year}`);
+         }
+      }
+
+      class car extends Vehicle{
+        constructor(name,year,model){
+            super(name,year);
+            this.model= model;
+        }
+        dispaly2(){
+            console.log(`model : ${this.model}`);
+        }
+      }
+      class sportsCar extends car{
+        constructor(name,year,model,color){
+            super(name,year,model);
+            this.color = color;
+        }
+        dispaly3(){
+            this.dispaly1();
+            this.dispaly2();
+            console.log(`color: ${this.color}`);
+        }
+      }
+      let cars = new sportsCar("porche",2025,"turbocharged","red");
+      cars.dispaly3();
+
+
+      console.log("Question no 3");
+        class shape {
+           display (){
+            console.log("this is a shape")
+           } 
+        }
+        class rectangle extends shape {
+            constructor(length, breath){
+                super();
+                this.length = length;
+                this.breath = breath;
+            }
+            displayArea(){
+                console.log(`length : ${this.length} breath : ${this.breath}`)
+            }
+        }
+        let rect = new rectangle( 20,18);
+        rect.display();
+        rect.displayArea();
+
+
+
+        console.log("Question no 4")
+        class Account1{
+            constructor (accno){
+                this.accno=accno;
+            }
+            displayacc(){
+                console.log(`Account no :${this.accno}`);
+            }
+        }
+        class savingsAccount extends Account1{
+            constructor(accno,balance){
+                super(accno);
+                this.balance = balance;
+            }
+            displaybal(){
+              this.displayacc();
+              console.log(`Balance : ${this.balance}`)
+            }
+        }   
+        let Account = new savingsAccount ( 7589011100, 5000)
+        Account.displaybal();
+        
+        
+        console.log("question no 5");
+        class device {
+            constructor(dname){
+                this.dname =  dname;
+            }
+          name(){
+            console.log(`Device Name : ${this.dname}`);
+          }
+        }
+        class Mobile extends device {
+            constructor(dname,brand){
+                super(dname);
+                this.brand = brand;
+            }
+            name1(){
+                this.name();
+                console.log(`BrandName : ${this.brand}`);
+            }
+        }
+        class SmartPhone extends Mobile{
+            constructor(dname,brand,os){
+                super(dname,brand);
+                this.os = os;
+            }
+            name3 (){
+               this.name1();
+                console.log(`Version : ${this.os}`);
+            }
+        }
+        let Mob = new SmartPhone("RXM502","Realme" , "Androind 15" );
+        Mob.name3();
+
+        console.log("Question 6");
+        class Area {
+            calculateArea(type,a,b){
+                if(type === "Squre"){
+                console.log(`squre circumference : ${4*a}`)
+             }
+            
+            else if(type === "Rectangle"){
+                console.log(`Rectangle circumference : ${2*(a+b)}`);
+                
+             }
+            
+             else if(type === "circle"){
+                console.log(`circle circumference : ${2* Math.PI *a}`);
+             }
+            }
+        }
+        let obj = new Area();
+        obj.calculateArea("Squre",20);
+        obj.calculateArea("Rectangle",5,10)
+        obj.calculateArea("circle",30)
+        
+        console.log("Qustion no7")
+        class Shape {
+        Draw(type) {
+
+        if (type === "circle") {
+            console.log("Drawing a circle");
+        }
+
+        else if (type === "rectangle") {
+            console.log("Drawing a rectangle");
+        }
+
+        else if (type === "triangle") {
+            console.log("Drawing a triangle");
+        }
+
+        else {
+            console.log("Invalid shape");
+        }
+    }
+}
+
+let obj1 = new Shape();
+
+obj1.Draw("circle");
+obj1.Draw("rectangle");
+obj1.Draw("triangle");
+
+    </script>
+</body>
+</html>
