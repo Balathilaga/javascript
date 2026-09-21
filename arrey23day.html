@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("push");
+        let car = ["volvo", "BMW" , "Audi"]
+        car.push("innova");
+        console.log(car);
+      
+        console.log("pop");
+        let car1 = ["volvo", "BMW" , "Audi"]
+        car1.pop();
+        console.log(car1);
+
+        console.log("unshift");
+        let car2 = ["volvo", "BMW" , "Audi"]
+        car2.unshift("innova");
+        console.log(car2);
+
+        console.log("shift");
+        let car3 = ["volvo", "BMW" , "Audi"]
+        car3.shift();
+        console.log(car3);
+
+
+        console.log("map")
+        let numbers = [1,2,3,4,5];
+        let doubled = numbers.map((num) => {
+             return num * 2 ;
+        });
+        console.log(doubled);
+
+
+       console.log("find even numbers")
+        let numbers1 = [1, 2, 3, 4, 5, 6];
+        let evenNumbers = numbers1.filter((num) => {
+            return num % 2 === 0;
+        });
+        console.log(evenNumbers);
+   
+
+        console.log("sum numbers");
+        let numbers3 = [1,2,3,4,5,6,7,8,9];
+        let sum = numbers3.reduce((total,num) => total + num ,0)
+        console.log(sum);
+
+
+        console.log("find")
+        let number4 = [1,5,12,15];
+        let greater = number4.find(num => num > 10);
+        console.log(greater);
+
+        console.log("includes")
+        let numbers5 = [10,50,100,150,90]
+        let int = numbers5.includes(100);
+        console.log(int);
+
+        console.log("push 1");
+        const pu = [];
+        for(let i = 1; i<=20; i++){
+            pu.push(i);
+        }
+        console.log(pu);
+
+
+       const Array1 = [];
+       let b = 1;
+       while (b <= 20) {
+       Array1.push(b);
+       b += 2;
+      }
+      console.log(Array1);
+
+    
+     const arreyEven1 = [];
+     for(let a=0; a<=20; a+=2){
+        arreyEven1.push(a);
+     }
+    console.log(arreyEven1);
+
+
+    const arreyFive = [];
+    for(let c=0; c<=30; c+=5){
+        arreyFive.push(c);
+    }
+    console.log(arreyFive);
+
+
+    </script>
+</body>
+</html>
