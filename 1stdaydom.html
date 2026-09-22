@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h2>task 1</h2>
+     <p id="message 1">old text</p>
+    <p id="message 2">one text</p>
+    <p id="message 3">two text</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const x = document.getElementById("message 2");
+        document.getElementById("demo").innerHTML =
+        "the new next will be enter  :" + x.innerHTML;
+    </script>
+
+
+    <button id="myButton">Click Me</button>
+    <script>
+        document.getElementById("myButton").disabled = true;
+    </script>
+
+
+
+  <div id="box"> this is the box</div>
+  <script>
+    document.getElementById("box").style.backgroundColor ="lightgreen"
+  </script>  -->
+
+ <!-- <h2>Task 2</h2>
+  <p>This is the paragraph of beginning level of DOM</p>
+  <p> Today section  we learned overview of DOM</p>
+  <p> In this task i gonna change text color using a tagname</p>
+
+  <script>
+     const y = document.getElementsByTagName("p");
+
+     y[0].style.color = "blue";
+     y[1].style.color = "red";
+     y[2].style.color = "pink";
+</script> 
+
+<ul>
+    <li>Apple</li>
+    <li>Realme</li>
+    <li>vivo</li>
+    <li>sumsung</li>
+</ul>
+
+<p id="count"></p>
+
+<script>
+    const x = document.getElementsByTagName("li");
+    document.getElementById("count").innerHTML =
+    "Number of listed elements:" + x.length;
+</script>
+
+
+<h1>hello world</h1>
+<h1>welcome to DOM</h1>
+<h1>it's continue....</h1>
+ <script>
+    const t = document.getElementsByTagName("h1");
+    for(let i = 0 ; i < t.length; i++){
+    t[i].style.fontSize = "35px";
+   }
+ </script> -->
+
+ <h2>Task 3</h2>
+  <!-- <p class="one">hi...</p>
+ <p class="one">how r u buddy..</p>
+  <script>
+    const b = document.getElementsByClassName("one");
+    b[0].style.backgroundColor = "blue";
+    b[1].style.backgroundColor = "yellow";
+</script> 
+
+<p class="hidden"> This paragraph should hide from the webpage</p>
+<p class="hidden">Documnt Object Model when a browser loads an htmlpage.</p>
+<script>
+    const h = document.getElementsByClassName("hidden");
+    h[0].style.display = "none";
+</script>
+
+<p class="add"></p>
+<p class="add"></p>
+<p class="add"></p>
+<script>
+    const a = document.getElementsByClassName("add");
+    a[0].innerHTML = "hello this is the message"
+    a[1].innerHTML = "this is blue color"
+    a[2].innerHTML = "hi.. i'm balathilaga"
+</script> -->
+
+<!-- <h2>Task 4</h2>
+<p>to changed the color of the text</p>
+<p>this is the element selector </p>
+<p> we can change through the querry </p>
+<script>
+    const q = document.querySelector("p");
+    q.innerHTML = " to change all elements through the querry selector"     
+</script>
+
+<p class="change">this is the text</p>
+<p class="special"> this is perfect fo color change mood</p>
+<script>
+    const q1 = document.querySelector(".special");
+    q1.style.color ="lightgreen";
+</script> -->
+
+
+ <form>
+<input type="text" id="username" value="Bala">
+</form>
+<script>
+    const f = document.querySelector("form input");
+    console.log(f.value);
+</script> 
+
+<input type="text" >
+<input type="password">
+
+<script>
+    const i = document.querySelector('input[type = "text"]');
+    i.style.backgroundColor = "beige"
+</script>
+</body>
+</html>
