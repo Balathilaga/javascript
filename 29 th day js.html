@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        background-color: white;
+        color: black;
+
+      }
+      .dark{
+        background-color: black;
+        color: white;
+      }
+    </style>
+</head>
+<body>
+  <!-- <h1>Task 1</h1>
+  <button id="mybutton">Click Me</button>
+  <p id="demo"></p>
+
+     <script>
+      document.getElementById("mybutton").onclick = function(){
+      document.getElementById("demo").innerText = "Hello World";}
+    </script> -->
+
+<!-- <h1>task 2</h1>
+<button id="mybutton1">Click Me</button>
+ <script>
+    document.getElementById("mybutton1").onclick = function(){
+    this.style.color = "red";
+  }
+</script>
+
+<h1>task 3</h1>
+<div id="change">Change Color</div>
+
+<script>
+  document.getElementById("change").onmouseover = function(){
+    this.style.backgroundColor = "blue";
+  }
+</script> -->
+
+
+<!-- <h1>task 4</h1>
+<button id="click">Hi....</button>
+<script>
+  document.getElementById("click").ondblclick = function(){
+  alert("when you double click this pop msg is visible");
+  }
+</script> -->
+
+
+<!-- <h1>task 5</h1>
+<input type="text" id="input">
+<p id="output"></p>
+<script>
+  document.getElementById("input").onkeydown = function(event){
+  document.getElementById("output").innerHTML = "You Pressed:" + event.key;
+  }
+</script> -->
+
+<!-- <h2>second taks (1)</h2>
+<button id="button1">Click Me</button>
+<p id="count">counter :</p>
+
+<script>
+  let count = 0;
+  const btn = document.getElementById("button1");
+  const cnt = document.getElementById("count");
+  btn.addEventListener("click",function(){
+    count++;
+    cnt.innerText = "count :" + count;
+  })
+</script> -->
+
+
+<!-- 
+ <h1>second task (2)</h1>
+<button id="mybutton2">Click Me</button>
+<p id="ccolor">Hello js</p>
+<script>
+  const btn1 = document.getElementById("mybutton2");
+  const clr = document.getElementById("ccolor")
+   
+  btn1.addEventListener("click",function(){
+      clr.style.backgroundColor = "yellow";
+  }) 
+</script>  -->
+
+
+  <h2>Task 2 (three)</h2>
+
+  <button id="dark">DarkMode</button>
+
+  <script>
+    const butn1= getElementById("dark");
+    butn1.addEventListener("click",function (){   
+      document.body.classList.toggle("dark");
+    });
+  </script>
+
+<h2>Task 2 (four)</h2>
+<div class="mouse" style="height: 30px; width: 100px; background-color: rgb(195, 195, 55); text-align: center; padding: 5px;" >
+   Hello World</div>
+
+<script>
+  const mse = document.querySelector(".mouse");
+  mse.addEventListener("mouseenter" , function(){
+   mse.style.backgroundColor = "red";
+  });
+
+  mse.addEventListener("mouseleave", function (){
+    mse.style.backgroundColor = "rgb(195, 195, 55)";
+  });
+</script>
+
+
+
+<h2>Task 2 (five)</h2>
+<input type="text" id="inputBox">
+<p id="output"></p>
+
+<script>
+  const input = document.querySelector("#inputBox");
+  const output = document.querySelector("#output");
+
+  input.addEventListener("input", function() {
+    output.textContent = input.value;
+  });
+</script>
+
+
+</body>
+</html>
