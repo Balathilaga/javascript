@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Task 1</h2>
+    <script>
+        function calculate (a,b,callback){
+            return callback(a,b)
+        }
+        function addition(a,b){
+            return a+b;
+        }
+        let result = calculate (10,20,addition);
+        console.log(result);
+    </script>
+
+    <h2>task 2</h2>
+    <script>
+        function greetUser(name,callback){
+            callback(name);
+        }
+         
+        function welcomemsg(name){
+            console.log("welcome" + name + "!")
+        }
+        greetUser("viswa",welcomemsg);
+    </script>
+
+    <h2>task 3</h2>
+    <script>
+        function processArray(arr, callback) {
+       return arr.map(callback);
+      }
+
+      function double(num) {
+      return num * 2;
+     }    
+
+      let numbers = [1, 2, 3, 4, 5];
+      let result1 = processArray(numbers, double);
+
+     console.log(result1);
+     </script>
+
+<h2>task 4</h2>
+<script>
+    function findNumber(arr,callback){
+        return arr.find(callback);
+    }
+    function isEven(num){
+         return num % 2 === 0;
+    }
+    let numbers1 = [1,5,8,4,10,12];
+    let result3 = findNumber(numbers1,isEven);
+    console.log(result3);
+</script>
+
+
+<h2>task 5</h2>
+<script>
+  function removeNegative(arr, callback) {
+  return arr.filter(callback);
+}
+
+function isPositive(num) {
+  return num >= 0;
+}
+
+let numbers4 = [10, -5, 20, -8, 30, -2];
+
+let result4 = removeNegative(numbers4, isPositive);
+
+console.log(result4);
+</script>
+
+<h2>task 6</h2>
+<script>
+    function checkEligibility(age, callback) {
+  callback(age);
+}
+
+function checkVote(age) {
+  if (age >= 18) {
+    console.log("Eligible to vote");
+  } 
+  else {
+    console.log("Not eligible to vote");
+  }
+}
+checkEligibility(20, checkVote);
+
+</script>
+</body>
+</html>
