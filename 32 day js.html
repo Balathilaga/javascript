@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    
+    <script>
+        console.log("task1")
+        const promise = new Promise((resolve) =>{
+        setTimeout(() => {
+          resolve ("Welcome to JS promises")  
+        },2000);
+        })
+        promise.then((message) =>{
+            console.log(message);
+        });
+    
+
+        console.log("task2")
+        const promise0 = new Promise((resolve,reject) =>{
+        setTimeout(() => {
+          reject ("Invalid Data")  
+        },3000);
+        })
+        promise0.catch((message) =>{
+         console.log(message);
+        });
+
+
+        console.log("task 3")
+        function checkNumber(num){
+            return new Promise((resolve,reject)=>{
+              if (num % 2 !== 0){
+                resolve ("Number is odd")
+              }
+              else{
+                reject ("Number is even")
+              }
+            })
+        }
+        checkNumber(8)
+        .then((message) =>{
+            console.log(message);
+        })
+
+       .catch((message) => {
+        console.log(message)
+       });
+
+
+       console.log("task 4");
+       function eligible (age){
+        return new Promise((resolve,reject) => {
+          if (age >=18){
+            resolve ("its eligible for employement");
+          }else {
+            reject ("not eligible for employment")
+          }
+        })
+       }
+       eligible (19)
+       .then((message) =>{
+        console.log(message);
+       })
+       .catch((message) => {
+        console.log(message)
+       });
+        
+     
+       console.log("task 5");
+       function sum (a,b) {
+         return new Promise ((resolve,reject) =>{
+            if (b >= 0){
+                resolve (a+b);
+            } else{
+                reject ("b should not be negative")
+            }
+         })
+       }
+       sum (5,-5)
+       .then((message)=>{
+        console.log(message);
+       })
+        .catch((message)=>{
+        console.log(message)
+       });
+
+    
+       console.log("task 6");
+       const orderfood = new Promise((resolve) =>{
+        console.log("Order Placed");
+
+        setTimeout(() => {
+            resolve ("Food is Ready")
+        }, 5000);
+       })
+       orderfood.then((message) => {
+          console.log(message);
+       })
+
+
+       console.log("task 7");
+       function checkStings (str){
+        return new Promise((resolve,reject)=>{
+            if (str.length >0){
+                resolve("the Character contains in string")
+            }else{
+                reject("string is empty")
+            }
+        })
+       }
+       checkStings("")
+       .then((message)=>{
+        console.log(message);
+       })
+       
+       .catch((message)=>{
+        console.log(message)
+       });
+
+
+       console.log("task 8");
+       function evenNumber (num){
+        return new Promise((resolve,reject)=>{
+            if (num % 2 ===0 ){
+                resolve ("is Even numbr")
+            }else{
+                reject ("is odd number")
+            }
+        })
+       }
+       evenNumber(3)
+       .then((message)=>{
+        console.log(message);
+        })
+        .catch((message)=>{
+        console.log(message)
+        });
+
+
+        console.log("task9");
+        const promise1 = new Promise((resolve) => {
+        setTimeout(() => {
+        resolve("Promise 1 completed");
+        }, 1000);
+        });
+
+       const promise2 = new Promise((resolve) => {
+       setTimeout(() => {
+       resolve("Promise 2 completed");
+       }, 2000);
+      });
+
+      const promise3 = new Promise((resolve) => {
+      setTimeout(() => {
+      resolve("Promise 3 completed");
+      }, 3000);
+    });
+
+      Promise.all([promise1, promise2, promise3])
+      .then((result) => {
+      console.log(result);
+       })
+      .catch((error) => {
+       console.log(error);
+       });
+  
+     console.log("task10")
+     const promisee = new Promise((resolve) => {
+      setTimeout(() => {
+      resolve("Promise 1 completed");
+    }, 3000);
+   });
+
+   const promiseee = new Promise((resolve, reject) => {
+   setTimeout(() => {
+    reject("Promise 2 rejected");
+   }, 1000);
+   });
+
+   const promiseeee = new Promise((resolve) => {
+   setTimeout(() => {
+   resolve("Promise 3 completed");
+  }, 2000);
+});
+
+  Promise.race([promisee, promiseee, promiseeee])
+  .then((message) => {
+    console.log(message);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+ console.log("task 11");
+ async function message() {
+   await new Promise((resolve)=>{
+    setTimeout(resolve,2000);
+ });
+    return "Welcome to Js" 
+ }
+ message ().then((result)=>{
+    console.log(result);
+ })
+
+
+ console.log("task 12");
+    function getUser() {
+    return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        id: 1,
+        name: "Rahul",
+        email: "rahul@gmail.com"
+      });
+    }, 1500);
+  });
+}
+
+    async function displayUser() {
+     const user = await getUser();
+
+    console.log("User Name:", user.name);
+    console.log("Email:", user.email);
+}
+
+    displayUser();
+
+  console.log("task 13");
+  async function loginUser(isLoggedIn) {
+    if(isLoggedIn){
+        return "loggin Successful"
+    }else{
+        throw new error ("Invalid Creditial")
+    }
+    
+  }
+  async function checkLogin() {
+  try {
+    const result = await loginUser(true);
+    console.log(result);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+checkLogin();
+
+
+
+console.log("task 14");
+function getOrder() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Order received");
+    }, 1000);
+  });
+}
+
+function processOrder() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Order processed");
+    }, 1000);
+  });
+}
+
+function deliverOrder() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Order delivered");
+    }, 1000);
+  });
+}
+
+async function orderProcess() {
+  const order = await getOrder();
+  console.log(order);
+
+  const processed = await processOrder();
+  console.log(processed);
+
+  const delivered = await deliverOrder();
+  console.log(delivered);
+}
+
+orderProcess();
+
+    
+ console.log("task 15");
+
+ function getProducts() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(["Laptop", "Mobile", "Tablet"]);
+    }, 2000);
+  });
+}
+
+async function loadProducts() {
+  console.log("Loading products...");
+  const products = await getProducts();
+  console.log(products);
+}
+
+loadProducts();
+
+    </script>
+</body>
+</html>
