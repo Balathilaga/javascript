@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("task 1")
+        let arr = [10,20,30,40,50,];
+        let first= arr[0];
+        let last = arr[arr.length-1]
+        console.log(first);
+        console.log(last);
+
+        console.log("task 2");
+        let arr1 = [100,200,300];
+        let [a, , c] = arr1
+        console.log(a);
+        console.log(c);
+
+        console.log("task 3");
+        let arr3 = [1,2,3,4,5];
+        let [a1,...rest]=arr3;
+        console.log(a1);
+        console.log(rest);
+
+        console.log("task 4");
+        let z = [1,2];
+        let y = [3,4];
+        console.log(...z,...y);
+
+        console.log("task 5");
+        let arry = [10,20,30];
+        let coppied = [...arry];
+        console.log(coppied);
+
+        console.log("task 6");
+        let product ={
+            id:1,
+            name: "mobile",
+            price:15000
+        }
+        let {name, price} = product;
+        console.log(name);
+        console.log(price);
+      
+
+        console.log("task 7");
+        let user = { name: "viswaa", age: 25 };
+        let { name: fullName } = user;
+        console.log(fullName); 
+      
+
+        console.log("task 8");
+        let student = {
+        marks: {
+        math: 95,
+        science: 90
+        }
+    };
+     let {math,science} = student;
+     console.log(student);
+
+
+     console.log("task 9");
+     function show({name,age}){
+    console.log(name,age);
+    } 
+    show({name :"Bala" , age :25});
+ 
+
+    console.log("task 10");
+    let arr5 = [10, 20, 30, 40];
+    arr5.shift();       
+    arr5.push(100, 200);
+
+    console.log(arr5);
+
+
+        
+    </script>
+</body>
+</html>
