@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin: 0; box-sizing: content-box;}
+        .form{
+           width: 800px;
+           background-color: rgb(242, 216, 184);
+           margin:10px;
+           padding: 20px;
+           border-radius: 50px;
+           box-shadow: 3px 5px 10px 3px black;
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           
+        }
+        h2{
+            text-align: center;
+            color: rgb(6, 6, 88);
+        }
+       .name,
+       .email{
+
+            width: 100%;
+            padding:5px;
+            box-sizing: border-box;
+       }
+       textarea{
+        border-radius: 10px;
+        color: red;
+        text-align: center;
+        width: 50%;
+        font-size: large;
+       }
+       button{
+        background-color: red;
+        border-radius: 15px;
+        color: white;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+       }
+
+    </style>
+</head>
+<body>
+<div class="form">
+    <h2>Customer Feedback Form</h2>
+    <form id="feedbackform">
+        <div class="name">
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" required>
+        </div><br>
+
+        <div class="email"> 
+          <label for="email id">Email Id</label><br>
+          <input type="text" id="email" required>
+        </div><br>
+
+        <div class="question ">
+            <label>Reason for visit / Purchase</label>
+
+            <div class="options">
+            <label>
+                <input type="radio" name="reason" value="product">
+                    product purchase
+            </label><br>
+            <label>
+                <input type="radio" name="reason " value="customer">
+                   customer support
+            </label><br>
+            <label>
+                <input type="radio" name="reason" value="browser">
+                   Browsing/Research
+            </label><br>
+            <label>
+                <input type="radio" name="reason " value="other">
+                    others
+            </label>
+            </div> <br>
+
+
+            <div class="question ">
+            <label>Overall Satisfaction</label>
+
+            <div class="options1">
+            <label>
+                <input type="radio" name="1" value="very satisfied">
+                    very satisfied
+            </label><br>
+            <label>
+                <input type="radio" name="2" value="dissatisfied">
+                   Dissatisfied 
+            </label><br>
+            <label>
+                <input type="radio" name="3" value="neutral">
+                   neutral
+            </label><br>
+            <label>
+                <input type="radio" name="4 " value="satisfied">
+                    satisfied
+            </label>
+            <label>
+                <input type="radio" name="5 " value="verysatisfied">
+                    very satisfied
+            </label>
+            </div><br>
+      
+
+        <div class="question "> Ease of Use / Navigation</div>
+
+        <input type="radio" name="ease" value="Very Easy">
+        Very Easy <br>
+
+        <input type="radio" name="ease" value="Easy">
+        Easy <br>
+
+        <input type="radio" name="ease" value="Neutral">
+        Neutral <br>
+
+        <input type="radio" name="ease" value="Difficult">
+        Difficult <br>
+
+        <input type="radio" name="ease" value="Very Difficult">
+        Very Difficult <br><br>
+
+
+        <div class="question ">Ease of use/ Navigation <br>
+            <input type="radio" name="ease" value="very">Very easy <br>
+
+            <input type="radio" name="ease" value="easy">Easy <br>
+
+            <input type="radio" name="ease" value="neutral">neutral <br>
+
+            <input type="radio" name="ease" value="dificult">Dificult <br>
+
+            <input type="radio" name="ease" value="very">Very Dificult <br>
+        </div><br>
+
+
+        <div class="question ">Product / Service Quality  <br> 
+
+            <input type="radio" name="product" value="excelelnt">Excelent <br>
+
+            <input type="radio" name="product" value="good">Good <br>
+
+            <input type="radio" name="product" value="average">Average <br>
+
+            <input type="radio" name="product" value="poor">Poor <br>
+
+            <input type="radio" name="product" value="very">Very Poor <br> <br>
+        </div><br>
+
+        
+        <div class="question ">Staff / Customer Support Helpfulness  <br> 
+
+            <input type="radio" name="Staff" value="no">N/A - No interaction <br>
+
+            <input type="radio" name="Staff" value="extremly"> Extremely Helpful <br>
+
+            <input type="radio" name="Staff" value="somehelpful">Somewhat Helpful <br>
+
+            <input type="radio" name="Staff" value="unhelpful"> Unhelpful <br>
+      </div> <br>
+
+       <div class="question">How likely are you to recommend us to a friend?<br><br>
+        <input type="number" id="recomended" min="0" max="10" required>
+       </div> <br>
+   
+
+       <div class="question ">What can we improve? <br> 
+
+            <input type="radio" name="improve" value=" Product Selectiono"> Product Selection <br>
+
+            <input type="radio" name="improve" value="Pricing"> Pricing <br>
+
+            <input type="radio" name="improve" value=" Website / App "> Website / App <br>
+
+            <input type="radio" name="improve" value=" Delivery/ sevice speed"> Delivery/service speed<br>
+
+             <input type="radio" name="improve" value="  Customer Support">  Customer Support<br>
+      </div> <br>
+
+
+      <div class="question">Additional Information :<br>
+        <textarea id="comments" rows="8" placeholder="Enter your comments"></textarea>
+      </div> <br>
+
+      <button type="submit">Submit Feedback</button>
+      <button type="reset">Cancel</button>
+    </form>   
+    </div>
+
+    <script>
+      const form = document.getElementById("feedbackform");
+      function saveSession() {
+
+        let name = document.getElementById("fullName").value;
+        let email = document.getElementById("email").value;
+
+        sessionStorage.setItem("name", viswa);
+        sessionStorage.setItem("email", viswa);
+
+        alert("Data Session Storage-la save");
+    }
+
+    
+    function loadSession() {
+
+        document.getElementById("fullName").value =
+            sessionStorage.getItem("name") || "";
+
+        document.getElementById("email").value =
+            sessionStorage.getItem("email") || "";
+    }
+
+    function saveLocal() {
+
+        let name = document.getElementById("fullName").value;
+        let email = document.getElementById("email").value;
+
+        localStorage.setItem("name", name);
+        localStorage.setItem("email", email);
+
+        alert("Data Local Storage-la save!");
+    }
+
+    function loadLocal() {
+
+        document.getElementById("fullName").value =
+            localStorage.getItem("name") || "Bala";
+
+        document.getElementById("email").value =
+            localStorage.getItem("email") || "Bala@";
+    }
+
+
+    </script>
+</body>
+</html>
